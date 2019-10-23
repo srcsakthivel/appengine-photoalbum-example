@@ -119,6 +119,7 @@ logger = logging_client.logger(log_name)
 def index():
     text = 'homepage - load'
     logger.log_text(text)
+    print('Logged: {}'.format(text))
     return render_template('index.html')
 
 
