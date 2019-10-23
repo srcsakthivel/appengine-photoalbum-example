@@ -81,7 +81,11 @@ env_variables:
 
 [11]: https://cloud.google.com/translate/docs/languages
 
-## Deploy the application
+## Deploy the application - For quite/no prompt deployment
+
+```shell
+$ gcloud app deploy -q
+```
 
 ```shell
 $ pip install -r requirements.txt -t lib
