@@ -4,7 +4,7 @@ threadsafe: true
 service: bootstrapapp
 
 handlers:
-- url: /
+- url: /.*
   script: main.app
 
 env_variables:
