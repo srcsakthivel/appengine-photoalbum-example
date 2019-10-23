@@ -5,13 +5,10 @@ threadsafe: true
 handlers:
 - url: /
   script: main.app
-- url: /.*
-  script: main.app
-  login: required
 
 env_variables:
-  LANG_TAG: 'it'
-  TIMESTAMP_TZ: 'Europe/Rome'
+  LANG_TAG: 'en'
+  TIMESTAMP_TZ: 'US/Eastern'
 
 libraries:
 - name: ssl
