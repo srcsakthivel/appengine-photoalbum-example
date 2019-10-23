@@ -109,16 +109,13 @@ class PhotoForm(Form):
 class TagForm(Form):
     tag = SelectField('Tag')
 
-logging_client = logging.Client()
-log_name = 'photoalbum-log'
-logger = logging_client.logger(log_name)
+
 
 
 
 @app.route('/')
 def index():
     text = 'homepage - load'
-    logger.log_text(text)
     print('Logged: {}'.format(text))
     return render_template('index.html')
 
