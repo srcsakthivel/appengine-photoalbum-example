@@ -27,7 +27,7 @@ from werkzeug.datastructures import CombinedMultiDict
 import cloudstorage as gcs
 from google.appengine.api import app_identity
 from google.appengine.ext import ndb
-from google.cloud import vision, translate
+from google.cloud import vision, translate, logging
 
 
 app = Flask(__name__)
@@ -109,9 +109,16 @@ class PhotoForm(Form):
 class TagForm(Form):
     tag = SelectField('Tag')
 
+logging_client = logging.Client()
+log_name = 'photoalbum-log'
+logger = logging_client.logger(log_name)
+
+
 
 @app.route('/')
 def index():
+    text = 'homepage - load'
+    logger.log_text(text)
     return render_template('index.html')
 
 
