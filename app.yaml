@@ -9,6 +9,7 @@ handlers:
 env_variables:
   LANG_TAG: 'en'
   TIMESTAMP_TZ: 'US/Eastern'
+  BUCKET: 'albumsapp'
 
 libraries:
 - name: ssl
