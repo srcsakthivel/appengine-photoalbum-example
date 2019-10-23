@@ -76,7 +76,7 @@ You can replace the timezone code used for timestamps, too.
 env_variables:
   LANG_TAG: 'it'              <-- change to your favorite language code.
   TIMESTAMP_TZ: 'Europe/Rome' <-- change to your favorite timezone code.
-  BUCKET: 'albumsapp' <-- change to your favorite timezone code.
+  BUCKET: 'albumsapp' <-- change to your bucket name.
 ```
 
 [11]: https://cloud.google.com/translate/docs/languages
