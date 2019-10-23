@@ -37,7 +37,7 @@ content_types = {'jpg': 'image/jpeg', 'jpeg': 'image/jpeg',
                  'png': 'image/png', 'gif': 'image/gif'}
 extensions = sorted(content_types.keys())
 
-bucket_name = app_identity.get_default_gcs_bucket_name()
+bucket_name = os.getenv('BUCKET', 'en')
 storage_path = 'https://storage.cloud.google.com/%s' % bucket_name
 tag_language = os.getenv('LANG_TAG', 'en')
 timestamp_tz = os.getenv('TIMESTAMP_TZ', 'US/Pacific')
